@@ -1,0 +1,15 @@
+{
+    "apps": [
+        {
+            "name": "HOSPITAL",
+            "script": "./app.js",
+            "args": "",
+            "watch": true,
+            "log_date_format": "DD-MM HH:mm:ss.SSS",
+            "env": {
+                "NODE": "pre-production",
+                "PORT_NUMBER": 34587
+            }
+        }
+    ]
+}
