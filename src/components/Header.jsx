@@ -12,6 +12,7 @@ import { IconButton } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
+import MenuDropdown from "./dropdown/MenuDropdown";
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -43,7 +44,7 @@ const Header = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={8}>
+            <Grid item xs={12}>
               <ul className="header__top__left">
                 <li>
                   <LocalPhoneIcon className="top-icon" /> 1-677-124-44227
@@ -58,7 +59,7 @@ const Header = () => {
                 </li>
               </ul>
             </Grid>
-            <Grid item xs={4}>
+            {/* <Grid item xs={4}>
               <div className="header__top__right">
                 <Link to="#">
                   <i className="fa fa-facebook"></i>
@@ -73,7 +74,7 @@ const Header = () => {
                   <i className="fa fa-dribbble"></i>
                 </Link>
               </div>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Container>
       </div>
@@ -116,9 +117,10 @@ const Header = () => {
               <Link to="#">Services</Link>
               <Link to="#">Contact Us</Link>
             </nav>
-            <Link to="#" className="primary-btn">
+            <MenuDropdown />
+            {/* <Link to="#" className="primary-btn">
               Book Appointment
-            </Link>
+            </Link> */}
           </Toolbar>
         </Container>
       </AppBar>

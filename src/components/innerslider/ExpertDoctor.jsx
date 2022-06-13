@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { Link } from "react-router-dom";
 import team1 from "../../images/team-1.png";
 import team2 from "../../images/team-2.png";
 import team3 from "../../images/team-3.png";
@@ -51,18 +51,18 @@ export default function ExpertDoctor() {
               <h5>{t.title}</h5>
               <span>Plastic surgeon</span>
               <div className="team__item__social">
-                <a href="#">
+                <Link to="#">
                   <i className="fa fa-facebook"></i>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <i className="fa fa-twitter"></i>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <i className="fa fa-instagram"></i>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <i className="fa fa-dribbble"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

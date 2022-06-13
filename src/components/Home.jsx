@@ -15,6 +15,8 @@ import ExpertDoctor from "./innerslider/ExpertDoctor";
 import GallerySlider from "./innerslider/GallerySlider";
 import Footer from "./Footer";
 
+import { Link } from "react-router-dom";
+
 export default function Home() {
   var settings = {
     dots: false,
@@ -57,10 +59,10 @@ export default function Home() {
             alignItems="center"
             spacing={3}
           >
-            <Grid md={4} xs={12} item>
+            <Grid md={5} xs={12} item>
               <BookAppoinment />
             </Grid>
-            <Grid md={8} xs={12} item>
+            <Grid md={7} xs={12} item>
               <div className="consultation__text">
                 <Grid container justifyContent="center" alignItems="center">
                   <Grid md={6} xs={12} item>
@@ -89,13 +91,12 @@ export default function Home() {
                         backgroundRepeat: "no-repeat",
                       }}
                     >
-                      <a
-                        target="_blank"
-                        href="https://www.youtube.com/watch?v=PXsuI67s2AA"
+                      <Link
+                        to="https://www.youtube.com/watch?v=PXsuI67s2AA"
                         className="play-btn video-popup"
                       >
                         <i className="fa fa-play"></i>
-                      </a>
+                      </Link>
                     </div>
                   </Grid>
                 </Grid>
@@ -131,9 +132,9 @@ export default function Home() {
             </Grid>
             <Grid lg={4} xs={12} item>
               <div className="services__btn">
-                <a href="#" className="primary-btn">
+                <Link to="#" className="primary-btn">
                   Contact us
-                </a>
+                </Link>
               </div>
             </Grid>
           </Grid>
