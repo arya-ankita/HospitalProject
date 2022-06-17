@@ -1,0 +1,29 @@
+@media (max-width: 1200px) {
+  .header__top {
+    display: none;
+  }
+  .makeStyles-menuright-1 {
+    display: none;
+  }
+  .d-none {
+    display: none;
+  }
+  .section-title {
+    margin-bottom: 0px;
+  }
+  .services__btn {
+    margin-bottom: 15px;
+  }
+  .services__btn {
+    margin-bottom: 15px;
+  }
+
+  .services__item__icon {
+    float: none;
+    margin: 0px;
+  }
+
+  .services__item {
+    text-align: center;
+  }
+}

@@ -683,3 +683,12 @@ img {
 
   text-decoration: none !important;
 }
+.py-4 {
+  padding: 2rem 0rem;
+}
+.headding {
+  color: #111111;
+  padding: 10px 0px;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+}

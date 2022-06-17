@@ -59,7 +59,7 @@ export default function Home() {
             alignItems="center"
             spacing={3}
           >
-            <Grid md={5} xs={12} item>
+            <Grid md={5} xs={12} item id="book">
               <BookAppoinment />
             </Grid>
             <Grid md={7} xs={12} item>
@@ -153,7 +153,7 @@ export default function Home() {
       <div className="spad">
         <GallerySlider />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
