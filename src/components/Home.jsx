@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "./Header";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -18,6 +18,14 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const titleRef = useRef();
+  //const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+  //const myRef = useRef(null);
+  //const executeScroll = () => scrollToRef(myRef);
+
+  function handleClick() {
+    titleRef.current.scrollIntoView({ behavior: "smooth" });
+  }
   var settings = {
     dots: false,
     infinite: true,
@@ -31,8 +39,8 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-
+      <Header handleClick={handleClick} />
+      {/* <button onClick={handleClick}>click</button> */}
       <div className="banner">
         <Slider {...settings}>
           <div>
@@ -60,7 +68,7 @@ export default function Home() {
             alignItems="center"
             spacing={3}
           >
-            <Grid md={5} xs={12} item id="book">
+            <Grid md={5} xs={12} item ref={titleRef}>
               <BookAppoinment />
             </Grid>
             <Grid md={7} xs={12} item>

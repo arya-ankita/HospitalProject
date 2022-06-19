@@ -5,12 +5,11 @@ import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Link from "@mui/material/Link";
-
-export default function FadeMenu() {
+export default function MenuDropdown({ handleClick }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = useState(false);
 
-  const handleClick = (event) => {
+  const handleClick1 = (event) => {
     setAnchorEl(event.currentTarget);
     setOpen(true);
   };
@@ -18,16 +17,22 @@ export default function FadeMenu() {
     setAnchorEl(null);
     setOpen(false);
   };
+  const handleAppoinment = () => {
+    handleClick();
+    setTimeout(() => {
+      handleClose();
+    }, 300);
+  };
 
   return (
-    <div className="d-none">
+    <div>
       <Button
         className="text-black"
         id="fade-button"
         aria-controls={open ? "fade-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        onMouseOver={handleClick}
+        onMouseOver={handleClick1}
         endIcon={<KeyboardArrowDownIcon />}
       >
         Appointment
@@ -42,8 +47,13 @@ export default function FadeMenu() {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem onClick={handleClose}>
-          <Link href="/#book" underline="none" color="inherit">
+        <MenuItem>
+          <Link
+            href="#!"
+            onClick={handleAppoinment}
+            underline="none"
+            color="inherit"
+          >
             Book appointment
           </Link>
         </MenuItem>

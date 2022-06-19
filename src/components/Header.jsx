@@ -33,7 +33,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Header = () => {
+const Header = ({ handleClick }) => {
   const classes = useStyles();
   const [state, setState] = React.useState(false);
   const toggleDrawer = () => {
@@ -88,7 +88,7 @@ const Header = () => {
       </div>
       <AppBar position="static" className={classes.AppBar}>
         <Container>
-          <Toolbar>
+          <Toolbar sx={{ justifyContent: "space-between" }}>
             <IconButton
               onClick={toggleDrawer}
               sx={{
@@ -125,17 +125,14 @@ const Header = () => {
               LOGO
             </Typography>
             <nav className="makeStyles-menuright-1">
-              <Link to="#" className="active">
+              <Link to="/" className="active">
                 Home
               </Link>
               <Link to="#">About Us</Link>
               <Link to="#">Services</Link>
               <Link to="#">Contact Us</Link>
             </nav>
-            <MenuDropdown />
-            {/* <Link to="#" className="primary-btn">
-              Book Appointment
-            </Link> */}
+            <MenuDropdown handleClick={handleClick} />
           </Toolbar>
         </Container>
       </AppBar>
