@@ -123,21 +123,27 @@ export default function Appointment() {
   return (
     <>
       <Header />
+      <div className="breadcrumbs overlay">
+        <Container sx={{ position: "relative", zIndex: "1" }}>
+          <div className="bread-inner">
+            <Typography variant="h2" className="headding">
+              {params.type === "current-appointment"
+                ? "Current appointment"
+                : "Running appointment"}
+            </Typography>
+          </div>
+        </Container>
+      </div>
       <Container>
         <div className="py-4">
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "end",
               marginBottom: "1rem",
             }}
           >
-            <Typography variant="h2" className="headding">
-              {params.type === "current-appointment"
-                ? "Current appointment"
-                : "Running appointment"}
-            </Typography>
             <TextField label="Search" id="search" size="small" />
           </Box>
           <Paper sx={{ width: "100%", overflow: "hidden" }}>
@@ -151,7 +157,7 @@ export default function Appointment() {
                         align={column.align}
                         style={{
                           minWidth: column.minWidth,
-                          background: "#13a2b7",
+                          background: "#ff5cf3",
                           color: "#fff",
                           fontWeight: "600",
                         }}

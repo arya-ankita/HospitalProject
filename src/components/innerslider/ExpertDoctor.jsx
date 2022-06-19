@@ -13,7 +13,7 @@ export default function ExpertDoctor() {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 3,
     arrows: false,
     autoplay: true,
 

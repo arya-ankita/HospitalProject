@@ -43,7 +43,7 @@ const useStyles = makeStyles({
   },
   siteBtn: {
     fontSize: "15px",
-    background: "#13a2b7",
+    background: "#ff5cf3",
     fontWeight: "600",
     border: "0px",
     borderRadius: "5px",
@@ -51,6 +51,9 @@ const useStyles = makeStyles({
     letterSpacing: "2px",
     padding: "14px 30px 12px",
     width: "100%",
+    "&:hover": {
+      background: "#f73fe9",
+    },
   },
 });
 

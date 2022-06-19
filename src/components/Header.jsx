@@ -8,13 +8,15 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@mui/material/Container";
 import MenuIcon from "@mui/icons-material/Menu";
 import { makeStyles } from "@material-ui/core/styles";
-import { IconButton } from "@mui/material";
+
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
 import MenuDropdown from "./dropdown/MenuDropdown";
+import MenuDrawer from "./MenuDrawer";
+import { IconButton } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   "@global": {
     ul: {
       margin: 0,
@@ -33,7 +35,13 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = () => {
   const classes = useStyles();
-
+  const [state, setState] = React.useState(false);
+  const toggleDrawer = () => {
+    setState(true);
+  };
+  const closeDrawer = () => {
+    setState(false);
+  };
   return (
     <>
       <div className="header__top">
@@ -45,7 +53,7 @@ const Header = () => {
             alignItems="center"
           >
             <Grid item xs={12}>
-              <ul className="header__top__left">
+              <ul className="header__top__left" style={{ textAlign: "right" }}>
                 <li>
                   <LocalPhoneIcon className="top-icon" /> 1-677-124-44227
                 </li>
@@ -82,8 +90,15 @@ const Header = () => {
         <Container>
           <Toolbar>
             <IconButton
+              onClick={toggleDrawer}
               sx={{
-                display: { xs: "block", md: "none", color: "#000" },
+                display: {
+                  xs: "block",
+                  md: "none",
+                  color: "#000",
+                  width: "50px",
+                  marginBlock: "15px",
+                },
               }}
               size="large"
               aria-label="account of current user"
@@ -124,6 +139,7 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
+      <MenuDrawer state={state} closeDrawer={closeDrawer} />
     </>
   );
 };

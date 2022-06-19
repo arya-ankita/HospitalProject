@@ -32,6 +32,7 @@ export default function Home() {
   return (
     <>
       <Header />
+
       <div className="banner">
         <Slider {...settings}>
           <div>
@@ -116,7 +117,7 @@ export default function Home() {
         </Container>
       </div>
       <div className="services spad set-bg1">
-        <Container>
+        <Container sx={{ position: "relative", zIndex: "1" }}>
           <Grid
             container
             direction="row"
