@@ -1,0 +1,49 @@
+.overlay {
+  position: relative;
+}
+
+.overlay:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #0c6a9c;
+  opacity: 0.8;
+}
+
+.mobilemenu li a span {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px !important;
+}
+
+.offcanvas__widget {
+  margin: 25px 0px 25px 18px;
+}
+
+.offcanvas__widget li {
+  display: flex;
+  padding: 5px 0px;
+  align-items: self-start;
+}
+
+.offcanvas__widget li i {
+  margin-right: 14px;
+  margin-top: 4px;
+  color: #0c6a9c;
+}
+.offcanvas__social {
+  text-align: center;
+}
+.offcanvas__social a {
+  font-size: 16px;
+  color: #0c6a9c;
+  display: inline-block;
+  margin-right: 20px;
+}
+.makeStyles_title {
+  font-size: 36px !important;
+  font-family: Poppins !important;
+  font-weight: 700 !important;
+}

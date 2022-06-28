@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import React, { useRef } from "react";
 import './App.css';
+import { lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+import SmallLoader from './component/loader/smallLoader';
+import Navbar from './component/navbar';
+import Footer from "./component/footer/Footer";
 
+const Home = lazy(() =>
+  import("./pages")
+);
 function App() {
+  const titleRef = useRef();
+  function handleClick() {
+    titleRef.current.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Navbar handleClick={handleClick} />
+      <Suspense
+        fallback={
+          <div className="lazyloader">
+            <SmallLoader />
+          </div>
+        }>
+        <Routes>
+
+          <Route path="/" element={<Home />} />
+
+        </Routes>
+      </Suspense>
+      <Footer />
+
+    </div >
   );
 }
 
