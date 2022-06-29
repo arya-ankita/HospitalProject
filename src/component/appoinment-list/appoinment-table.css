@@ -1,0 +1,16 @@
+.py_50 {
+  padding: 50px 0px;
+}
+.pb_50 {
+  padding-bottom: 50px;
+}
+
+.tableRow {
+  background: #f7f7f7;
+  color: #000;
+  font-weight: 600;
+}
+.tableRow {
+  background: #f7f7f7 !important;
+  font-weight: 600 !important;
+}

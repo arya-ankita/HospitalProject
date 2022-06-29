@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import SmallLoader from './component/loader/smallLoader';
 import Navbar from './component/navbar';
 import Footer from "./component/footer/Footer";
+import Appointment from "./pages/appoinment.view";
 
 const Home = lazy(() =>
   import("./pages")
@@ -26,7 +27,7 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Home />} />
-
+          <Route path="/appointment/:type" element={<Appointment />} />
         </Routes>
       </Suspense>
       <Footer />
