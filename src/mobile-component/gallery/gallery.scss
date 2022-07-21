@@ -1,0 +1,11 @@
+.gallery {
+  padding: 0px 10px 0px 10px;
+
+  .slick-slide {
+    img {
+      width: 100%;
+      display: inline-block;
+      border-radius: 5px;
+    }
+  }
+}

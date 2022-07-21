@@ -1,0 +1,120 @@
+.services {
+  padding: 0px 10px 0px;
+  // background: url("../../assets/images/bg.jpg") no-repeat center center;
+
+  position: relative;
+  .section_title {
+    margin-bottom: 0px;
+
+    span {
+      font-size: 12px;
+      color: #13a2b7;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    h2 {
+      color: #000;
+      font-weight: 500;
+
+      font-size: 18px;
+    }
+  }
+  .text_center {
+    text-align: left !important;
+  }
+  .services__btn {
+    text-align: right;
+    a {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 12px 30px 10px;
+      text-transform: uppercase;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 2px solid #13a2b7;
+      border-radius: 5px;
+      &:hover {
+        background: #13a2b7;
+        color: #fff;
+      }
+    }
+  }
+  .services-item {
+    background: #ffffff;
+    padding: 45px 30px 45px 50px;
+
+    border-radius: 5px;
+    border: 2px solid #f7f7f7;
+
+    .services-item-icon {
+      float: left;
+      margin-right: 40px;
+      span {
+        color: #0c6a9c;
+        font-size: 40px;
+        display: inline-block;
+        line-height: 76px;
+        transition: all, 0.3s;
+        &:before {
+          font-size: 70px;
+        }
+      }
+    }
+    .services-item-text {
+      overflow: hidden;
+      h5 {
+        font-size: 14px;
+        color: #111111;
+        font-weight: 500;
+        margin-bottom: 14px;
+        transition: all, 0.3s;
+      }
+      p {
+        margin-bottom: 0;
+        transition: all, 0.3s;
+        font-size: 14px;
+      }
+    }
+    &:hover {
+      border: 3px solid #fff;
+      background: #0c6a9c;
+
+      .services-item-icon {
+        span {
+          color: #fff;
+        }
+      }
+      .services-item-text {
+        h5 {
+          color: #fff;
+        }
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .services-item {
+      text-align: center;
+      padding: 20px;
+      .services-item-icon {
+        float: none;
+        margin: 0;
+      }
+    }
+    .text_center {
+      text-align: center !important;
+    }
+    .section_title {
+      margin-bottom: 0px;
+    }
+    .services__btn {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+}

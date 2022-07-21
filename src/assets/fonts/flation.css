@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("Flaticon.eot");
+  src: url("Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("Flaticon.woff2") format("woff2"), url("Flaticon.woff") format("woff"),
+    url("Flaticon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 0;
+}
+.flaticon-008-abdominoplasty:before {
+  content: "\f107";
+}
+.flaticon-027-beauty:before {
+  content: "\f11a";
+}
+.flaticon-031-anatomy:before {
+  content: "\f11e";
+}
+.flaticon-044-aesthetic:before {
+  content: "\f12b";
+}

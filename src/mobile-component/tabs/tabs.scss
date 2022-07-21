@@ -1,0 +1,23 @@
+.tabs-border {
+  background-color: #0c6a9c;
+  .tabs-half {
+    width: 50%;
+  }
+  .MuiTabs-flexContainer {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #fff;
+  }
+
+  .MuiTabs-indicator {
+    background-color: #fff;
+  }
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    color: #fff;
+  }
+  .MuiBox-root {
+    padding: 0px;
+  }
+}

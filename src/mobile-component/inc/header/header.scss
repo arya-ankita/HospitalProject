@@ -1,0 +1,27 @@
+body {
+  background: #fafafa;
+}
+.header {
+  background: #0c6a9c;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  border-bottom: 1px solid #cccccc4a;
+  .humber-menu {
+    color: #fff;
+  }
+  .mobile-logo {
+    h1 {
+      font-weight: bold;
+      font-size: 24px;
+      color: #fff;
+      margin: 0px;
+    }
+    .menu-toggle-right {
+      .MuiButtonBase-root {
+        color: #fff !important;
+      }
+    }
+  }
+}

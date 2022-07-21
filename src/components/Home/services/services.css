@@ -1,0 +1,125 @@
+.services__btn {
+  text-align: right;
+}
+.services__btn .primary-btn {
+  color: #ffffff;
+}
+.primary_btn {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 30px 10px;
+  text-transform: uppercase;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 2px solid #13a2b7;
+  border-radius: 5px;
+}
+.primary_btn:hover {
+  background: #13a2b7;
+  color: #fff;
+}
+.set_bg1 {
+  background: url("../../../assets/images/bg.jpg") no-repeat center top;
+  position: relative;
+}
+/* .set_bg1:before {
+  content: "";
+  background: #ff5cf3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0.8;
+} */
+.services .section_title span {
+  color: #13a2b7;
+}
+.services .section_title h2 {
+  color: #ffffff;
+}
+
+.services {
+  padding-bottom: 70px;
+}
+
+.set-bg1 .section_title span {
+  color: #fff;
+}
+
+.services__btn {
+  text-align: right;
+}
+
+.services__btn .primary-btn {
+  color: #ffffff;
+}
+
+.services .section_title.text_center {
+  text-align: left !important;
+}
+.services__item {
+  background: #ffffff;
+  padding: 45px 30px 45px 50px;
+  margin: 0px 10px;
+  border-radius: 5px;
+  border: 3px solid #fff;
+}
+
+.services__item:hover {
+  background: #0c6a9c;
+}
+
+.services__item:hover .services__item__icon span {
+  color: #ffffff;
+}
+
+.services__item:hover .services__item__text h5 {
+  color: #ffffff;
+}
+
+.services__item:hover .services__item__text p {
+  color: #ffffff;
+}
+
+.services__item__icon {
+  float: left;
+  margin-right: 40px;
+}
+
+.services__item__icon span {
+  color: #0c6a9c;
+  font-size: 40px;
+  display: inline-block;
+  line-height: 76px;
+  -webkit-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+
+.services__item__icon span:before {
+  font-size: 70px;
+}
+
+.services__item__text {
+  overflow: hidden;
+}
+
+.services__item__text h5 {
+  font-size: 20px;
+  color: #111111;
+  font-weight: 600;
+  margin-bottom: 14px;
+  -webkit-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+
+.services__item__text p {
+  margin-bottom: 0;
+  -webkit-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+}

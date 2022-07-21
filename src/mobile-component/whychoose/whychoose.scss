@@ -1,0 +1,35 @@
+.why-choose-area {
+  padding: 20px 0px;
+  background: #e7f6f3;
+  .px-3 {
+    padding: 15px;
+  }
+  .chooseus-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    background: #fff;
+    img {
+      display: inline-block;
+    }
+    h5 {
+      font-size: 20px;
+      color: #111111;
+      font-weight: 600;
+      margin-top: 26px;
+      margin-bottom: 16px;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 15px;
+      font-family: "Poppins", sans-serif;
+      color: #666666;
+      font-weight: 400;
+      line-height: 25px;
+    }
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: #0c6a9c;
+  }
+}

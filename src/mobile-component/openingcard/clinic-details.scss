@@ -1,0 +1,30 @@
+.bg-white {
+  background: #0c6a9c;
+}
+.clinic-details {
+  h5 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+  }
+  li {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-bottom: 1px solid #fff;
+    .w-70 {
+      width: 55%;
+    }
+    .w-30 {
+      width: 45%;
+    }
+    span {
+      color: #fff !important;
+    }
+  }
+}
+.list-style {
+  padding: 10px !important;
+  ul {
+    padding: 0px;
+  }
+}

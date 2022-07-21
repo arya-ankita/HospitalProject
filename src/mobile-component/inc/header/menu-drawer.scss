@@ -1,0 +1,51 @@
+.menu-drawer {
+  padding: 15px;
+  width: 250px;
+  .border-bottom {
+    border-bottom: 1px solid #f7f7f7;
+  }
+  .-mx-auto {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-family: Poppins;
+    font-weight: 500;
+  }
+  nav {
+    li {
+      a {
+        span {
+          font-family: Poppins;
+        }
+      }
+    }
+  }
+  hr {
+    margin: 15px 0px;
+  }
+  .offcanvas-widget {
+    margin: 0px;
+    li {
+      display: flex;
+      padding: 5px 0px;
+      align-items: self-start;
+      i {
+        margin-right: 14px;
+        margin-top: 4px;
+        color: #0c6a9c;
+      }
+    }
+  }
+  .offcanvas-social {
+    text-align: center;
+    a {
+      font-size: 16px;
+      color: #0c6a9c;
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+}
