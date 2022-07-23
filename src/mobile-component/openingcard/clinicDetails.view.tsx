@@ -6,6 +6,7 @@ const ClinicDetails = () => {
     { days: "Monday - Saturday", time: "Timing" },
     { days: "After Noon", time: "1:00 - 4:00 pm" },
     { days: "Evening", time: "5:00 - 9:00 pm" },
+    { days: "Sunday", time: "Close" },
   ];
   return (
     <>

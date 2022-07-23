@@ -11,8 +11,8 @@ const GalleryImage = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     arrows: false,
     autoplay: false,
 
@@ -20,7 +20,7 @@ const GalleryImage = () => {
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           arrows: false,
         },
       },

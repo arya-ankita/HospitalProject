@@ -1,14 +1,33 @@
 import {
   Autocomplete,
   Button,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  InputAdornment,
+  OutlinedInput,
+  Radio,
+  RadioGroup,
   Stack,
   TextareaAutosize,
   TextField,
 } from "@mui/material";
 import React from "react";
 import "./book-appoinment.scss";
+interface State {
+  inch: string;
+  age: string;
+}
 const BookAppoinment = () => {
-  const top100Films = [{ label: "10" }, { label: "20" }, { label: "30" }];
+  const [values, setValues] = React.useState<State>({
+    inch: "5.4",
+    age: "18",
+  });
+
+  const handleChange =
+    (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValues({ ...values, [prop]: event.target.value });
+    };
 
   const clinicSift = [{ label: "Day Shift" }, { label: "Night Shift" }];
   const doctorname = [{ label: "John" }, { label: "Tom" }];
@@ -36,7 +55,33 @@ const BookAppoinment = () => {
               type="email"
             />
 
-            <Autocomplete
+            <Stack direction="row" spacing={3}>
+              <TextField
+                fullWidth
+                label="Patient Age"
+                size="small"
+                type="number"
+                value={values.age}
+                onChange={handleChange("age")}
+              />
+              <TextField
+                id="outlined-adornment-inch"
+                size="small"
+                value={values.inch}
+                onChange={handleChange("inch")}
+                label="Patient Height"
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">Inch</InputAdornment>
+                  ),
+                }}
+                aria-describedby="outlined-inch-helper-text"
+                inputProps={{
+                  "aria-label": "inch",
+                }}
+              />
+            </Stack>
+            {/* <Autocomplete
               disablePortal
               id="combo-box-demo"
               options={top100Films}
@@ -44,13 +89,7 @@ const BookAppoinment = () => {
               renderInput={(params) => (
                 <TextField {...params} label="Patient Age" />
               )}
-            />
-            <TextField
-              fullWidth
-              label="Patient Height"
-              size="small"
-              type="text"
-            />
+            /> */}
 
             <Autocomplete
               disablePortal
@@ -88,6 +127,27 @@ const BookAppoinment = () => {
                 shrink: true,
               }}
             />
+            <FormControl>
+              <FormLabel id="demo-row-radio-buttons-group-label">
+                Gender
+              </FormLabel>
+              <RadioGroup
+                row
+                aria-labelledby="demo-row-radio-buttons-group-label"
+                name="row-radio-buttons-group"
+              >
+                <FormControlLabel
+                  value="male"
+                  control={<Radio />}
+                  label="Male"
+                />
+                <FormControlLabel
+                  value="female"
+                  control={<Radio />}
+                  label="Female"
+                />
+              </RadioGroup>
+            </FormControl>
             <TextField
               fullWidth
               label="Disease discription"

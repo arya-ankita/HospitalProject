@@ -2,6 +2,7 @@ import * as React from "react";
 
 import LinearProgress from "@mui/material/LinearProgress";
 import "./linearloader.scss";
+import { Avatar } from "@mui/material";
 
 export default function LinearDeterminate() {
   const [progress, setProgress] = React.useState(0);
@@ -24,7 +25,10 @@ export default function LinearDeterminate() {
 
   return (
     <div className="linearLoader">
-      <div className="w-100">
+      <div className="w-100 ">
+        <div className="logo-loader">
+          <Avatar sx={{ width: 56, height: 56 }}>logo</Avatar>
+        </div>
         <div className="slogan">Professional approach</div>
         <LinearProgress variant="determinate" value={progress} />
       </div>

@@ -22,8 +22,8 @@ export default function MenuDrawer(props: closeDrawer) {
     {
       name: "Home",
     },
-    { name: "About Us" },
-    { name: "Services" },
+    { name: "Today Appoinment" },
+    { name: "Current Appoinment" },
     { name: "Contact Us" },
   ];
   return (
